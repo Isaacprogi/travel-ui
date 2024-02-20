@@ -1,0 +1,169 @@
+.availableFlight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white-color);
+    position: relative;
+    padding: 1rem;
+    height: 10rem;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  
+  .topCurve1, .topCurve2 {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    z-index: 300;
+  }
+  
+  .topCurve1 {
+    left: -2rem;
+    top: -2rem;
+    transform: translateX(50%) translateY(50%);
+  }
+  
+  .topCurve2 {
+    right: 0;
+    top: -2rem;
+    transform: translateX(50%) translateY(50%);
+  }
+  
+  .bottomCurve1, .bottomCurve2 {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    z-index: 300;
+  }
+  
+  .bottomCurve1 {
+    left: 0;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%);
+  }
+  
+  .bottomCurve2 {
+    right: 0;
+    bottom: 0;
+    transform: translateX(50%) translateY(50%);
+  }
+  
+  .moreInfo {
+    align-items: center;
+  }
+  
+  .moreInfo, .priceBook {
+    flex-direction: column;
+    gap: .5rem;
+    display: flex;
+  }
+  
+  .priceBook {
+    gap: 1.5rem;
+    align-items: end;
+    justify-content: end;
+  }
+  
+  .bookButton {
+    background-color: var(--primary-button-color);
+    border-radius: var(--medium);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    color: var(--white-color);
+    cursor: pointer;
+    border: none;
+  }
+  
+  .bookButton:hover {
+    background-color: var(--primary-button-color-hover);
+  }
+  
+  .priceBook .price {
+    font-weight: 600;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .logo, .to, .from, .moreInfo, .priceBook {
+    color: var(--secondary-color);
+  }
+  
+  .from, .to {
+    display: none;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .time {
+    font-size: .8rem;
+  }
+  
+  .flightName {
+    font-size: .6rem;
+    font-weight: 500;
+  }
+  
+  .type {
+    font-size: .9rem;
+    font-weight: 500;
+  }
+  
+  .distance {
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--primary-button-color);
+  }
+  
+  .destinationSmall {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 1rem;
+    padding: .5rem;
+  }
+  
+  .toSmall, .fromSmall {
+    display: flex;
+    align-items: flex-end;
+    gap: .5rem;
+    color: var(--secondary-color);
+  }
+  
+  .borderLine {
+    position: absolute;
+    width: 100%;
+    height: .1rem;
+    border: 1px dashed var(--primary-color);
+    bottom: 0;
+    right: 0;
+  }
+  
+  @media screen and (min-width: 640px) {
+    .availableFlights {
+      border-radius: var(--medium);
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .destinationSmall {
+      display: none;
+    }
+    
+    .to, .from {
+      display: flex;
+    }
+  }
+  

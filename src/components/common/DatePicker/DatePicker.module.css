@@ -1,0 +1,39 @@
+.customInput{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.customInput input{
+  width: 100%;
+  background-color: var(--primary-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: inherit;
+  color: var(--secondary-color);
+  font-size: .9rem;
+}
+
+.customInput input:hover{
+  color: var(--white-color);
+}
+
+.customInput .calendarIcon{
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.customInput .calendarIcon:hover{
+  color: var(--white-color);
+  font-size: 1.2rem;
+}
+
+

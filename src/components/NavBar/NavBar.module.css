@@ -1,0 +1,82 @@
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3d5654;
+    width: 100%;
+    padding: .3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    height: 4rem;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: white;
+}
+
+.left img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.barIcon {
+    cursor: pointer;
+    color: white;
+    z-index: 900;
+    position: relative; 
+}
+
+.sidebarSlide {
+    width: 18rem;
+    position: fixed;
+    top: 0;
+    left: -200%;
+    overflow-y: auto;
+    z-index: 600;
+    transition: all 0.6s ease;
+    height: 100vh;
+}
+
+.open {
+    left: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 500; 
+    display: none;
+}
+
+.overlay.open {
+    display: block;
+}
+
+.sidebarSlide::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebarSlide {
+    scrollbar-width: none;
+}
+
+@media screen and (min-width: 640px) {
+    .sidebarSlide::-webkit-scrollbar {
+        display: block; 
+        width: 10px;
+    }
+
+    .sidebarSlide {
+        scrollbar-width: auto; 
+    }
+}

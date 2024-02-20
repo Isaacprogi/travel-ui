@@ -1,230 +1,369 @@
+.home {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.sidebar {
+  display: none;
+  border-radius: var(--medium);
+  overflow: hidden;
+  height: max-content;
+  width: 18rem;
+}
+
 .main {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.travelOptions {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-}
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.description p {
-  position: relative;
-  margin: 0;
+  border-radius: var(--medium);
   padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+  gap: 2rem;
 }
 
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
+.travelOptionsRight,
+.travelOptionsLeft {
+  flex: 1;
+  font-size: .8rem;
+  font-weight: 500;
+  background-color: var(--white-color);
+  border-radius: var(--medium);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
-  width: var(--max-width);
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
-}
-
-.center {
+.travelOptionsRight {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.locationIcon {
+  font-size: 1rem;
+}
+
+.locationOption {
+  display: flex;
   align-items: center;
-  position: relative;
-  padding: 4rem 0;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  border-radius: var(--medium);
+  overflow: hidden;
+  color: var(--secondary-color);
+  padding: .1rem;
+  flex-direction: column;
 }
 
-.center::before {
-  background: var(--secondary-glow);
+.locationFrom:hover,
+.locationTo:hover {
+  background-color: var(--secondary-color-lighter);
+  color: var(--white-color)
+}
+
+.locationFrom,
+.locationTo {
+  gap: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--medium);
+  height: 2.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--secondary-color);
+  padding: 1rem;
+}
+
+.horizonIcon {
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+  background-color: black;
+  color: var(--white-color);
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
+.wayOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  padding: .1rem;
+  gap: .7rem;
+  border-radius: var(--medium);
+  overflow: hidden;
+  flex-direction: column;
 }
 
-.center::before,
-.center::after {
-  content: "";
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
+.wayOption span {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--medium);
+  min-height: 2.4rem;
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--secondary-color);
+  min-width: 7rem;
 }
 
-.logo {
-  position: relative;
-}
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
+.wayOption span:hover {
+  background-color: var(--secondary-color-lighter);
+  color: var(--white-color)
 }
 
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
+.wayOption span.active {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.travelOptionsLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.travelOptionsLeftDetail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.travelOptionsLeftDetail span {
+  flex: 1;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--medium);
+  height: 2.7rem;
+  gap: .7rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+  min-width: 6.5rem;
+}
+
+.travelOptionsLeftDetail .dateWrapper {
+  overflow: visible;
+}
+
+.travelOptionsLeftDetail span:hover {
+  background-color: var(--secondary-color-lighter);
+  color: var(--white-color);
+}
+
+.resultFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  color: var(--secondary-color);
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+
+
+.resultFilter .filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--secondary-color);
+  flex-wrap: wrap;
+}
+
+.filter span {
+  background-color: var(--white-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-radius: var(--medium);
+  font-size: .7rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.result{
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.availableFlights {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.destinationDetails {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+  height: max-content;
+  border-radius: var(--medium);
+  min-height: 25rem;
+  width: 100%
+}
+
+.destinationDetailsDirection {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  color: var(--white-color);
+  justify-content: space-between;
+  width: 100%;
+}
+
+.destinationDetailsDirection span {
+  font-size: .7rem;
+}
+
+.destinationDetailsDirection span p {
+  font-size: 1.5rem;
+}
+
+.destinationDetailsDirection span:nth-of-type(3) {
+  display: flex;
+  align-items: flex-end;
+  justify-items: center;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.destinationDetailsDirection span:nth-of-type(1) {
+  display: flex;
+  align-items: flex-start;
+  justify-items: center;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.destinationOptions2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.destinationOptions2 span {
+  border-radius: var(--medium);
+  background-color: var(--primary-button-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: .7rem;
+}
+
+.destinationOptions2 span:hover {
+  background-color: var(--primary-button-color-hover);
+}
+
+.destinationMap {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 15rem;
+}
+
+.destinationMap img {
+  width: 100%;
+  border-radius: var(--medium);
+}
+
+
+.sectionC {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 640px) {
+  .home {
+    padding: 0.3rem;
+  }
+
+  .sectionC {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .availableFlights {
+    flex: 1;
+  }
+
+  .destinationDetails {
+    border-radius: var(--medium);
+    width: 20rem;
+  }
+
+  .travelOptions {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .travelOptionsRight {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .travelOptionsLeft {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .destinationOptions2 {
+    justify-content: space-between;
+    flex-wrap: nowrap;
   }
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
+@media screen and (min-width: 480px) {
+  .locationOption {
+    flex-direction: row;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
+  .wayOption {
+    flex-direction: row;
   }
+}
 
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
+@media screen and (min-width: 1024px) {
+  .home {
     display: flex;
-    justify-content: center;
-    position: fixed;
+  }
+
+  .main {
     width: 100%;
   }
 
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
-  }
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
+  .sidebar {
+    display: block;
   }
 }

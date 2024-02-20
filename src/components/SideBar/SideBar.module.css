@@ -1,0 +1,97 @@
+/* SideBar.module.css */
+.sideBar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--secondary-color-lighter);
+  }
+  
+  .top {
+    width: 100%;
+    min-height: 15rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    justify-content: center;
+    color: var(--white-color);
+    gap: 1rem;
+  }
+  
+  .userDetails {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+  
+  .top .name {
+    margin-top: .5rem;
+  }
+  
+  .top .email {
+    font-size: .8rem;
+  }
+  
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: var(--full);
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--full);
+  }
+  
+  .middle {
+    background-color: var(--secondary-color-lighter);
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .bottom {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--secondary-color-lighter);
+    height: 20rem;
+  }
+  
+  .bottom .title {
+    padding: 1rem;
+    padding-left: 2rem;
+    font-size: .9rem;
+    color: var(--primary-button-color);
+  }
+  
+  .bottom .map {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bottom .map img {
+    width: 100%;
+    height: 15rem;
+  }
+  
+  .imageStackWrapper {
+    padding: 1rem;
+    padding-left: 2rem;
+  }
+  
