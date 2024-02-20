@@ -10,7 +10,7 @@ git clone https://github.com/Isaacprogi/travel-ui.git
 Install packages
 ```
 npm install
-``
+```
 
 Run the application 
 ```
