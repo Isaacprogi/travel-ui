@@ -8,11 +8,19 @@ git clone https://github.com/Isaacprogi/travel-ui.git
 ```
 
 Install packages
+
 ```
 npm install
-``
+```
 
 Run the application 
 ```
 npm run dev
-``
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
